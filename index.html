@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>上证指数历史数据</title>
+
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			text-decoration: none;
+		}
+		
+		#message {
+			position: absolute;
+			height: 100%;
+			width: 20%;
+			background-color: rgba(30, 61, 74, 1);
+		}
+
+		#message p {
+			padding: 10px 20px;
+			color: gray;
+		}
+
+		#message a {
+			color: blue;
+		}
+
+		#container {
+			position: absolute;
+			left: 20%;
+			height: 100%;
+			width: 80%;
+		} 
+	</style>
+</head>
+<body>
+	<script src="https://cdn.bootcss.com/echarts/4.1.0.rc2/echarts.min.js"></script>
+	<div id="message">
+		<p style="margin-top: 20px;">
+			- 
+			<a href="https://voice.baidu.com/act/newpneumonia/newpneumonia/?from=osari_pc_3" target="_blank">数据来源于百度疫情地图</a>
+		</p>
+
+		<p>
+			
+		</p>
+	</div>
+	<div id="container"></div>
+	
+	<script>
+    	var dom = document.getElementById("container");
+    	var myChart = echarts.init(dom);
+	</script>
+
+	<script type="text/javascript" src="data.js"></script>
+</body>
+</html>
