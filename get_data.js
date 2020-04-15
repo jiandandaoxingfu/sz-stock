@@ -1,14 +1,14 @@
 const axios = require('axios');
 
-var years = new Array(2020 - 1990).join(',').split(',').map( (d, i) => i + 1991 );
+var years = new Array(2020 - 2010).join(',').split(',').map( (d, i) => i + 2011 );
 var data = '', year;
 
 async function run(count) {
-	if( count >= 5 ) {
+	if( count >= years.length ) {
 		data_format();
 		return;
 	}
-	let url = `http://quotes.money.163.com/trade/lsjysj_zhishu_000001.html?year=${years[count]}&season=`;
+	let url = `http://quotes.money.163.com/trade/lsjysj_zhishu_399006.html?year=${years[count]}&season=`;
 	let res1 = await axios.get(url + '1'),
 		res2 = await axios.get(url + '2'),
 		res3 = await axios.get(url + '3'),
